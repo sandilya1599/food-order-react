@@ -1,0 +1,26 @@
+.meal {
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.meal-content {
+
+}
+
+.meal-amount {
+    margin-left: auto;
+    padding: 7.5px;
+}
+
+.meal-amount input {
+    width: 35px;
+}
+
+.meal-amount button {
+    background-color: brown;
+    border-radius: 15px;
+    width: 75px;
+    color: white;
+}

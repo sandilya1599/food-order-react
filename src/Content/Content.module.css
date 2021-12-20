@@ -1,0 +1,38 @@
+.content{
+    position:relative;
+}
+
+.summary{
+    left: 30%;
+    top: 40%;
+    right: 30%;
+    z-index: 2;
+    float: left;
+    position: absolute;
+    background-color: rgba(49,49,49,255);
+    
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    
+    border-radius: 15px;
+    align-items: center;
+    color: white;
+    text-align: center;
+
+}
+
+.summary h2{
+    font-weight: bold;
+    text-align: center;
+}
+
+.summary div{
+    text-align: center;
+}
+
+.im img{
+    height: 30%;
+    display: block;
+    margin: 0 auto;
+}

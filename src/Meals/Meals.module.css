@@ -1,0 +1,27 @@
+.meals{
+    width: 50%;
+    height: 40%;
+
+    left: 20%;
+    right: 20%;
+
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    
+    align-items: center;
+
+    display: block;
+    margin: auto;
+    margin-top: 125px;
+    margin-bottom: 50px;
+    left: 25%;
+}
+
+.extend-bottom{
+    height: 20%;
+    width: 100%;
+    display: block;
+    color: white;
+    position: absolute;
+}
