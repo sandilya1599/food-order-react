@@ -18,7 +18,7 @@ function Header() {
     }
     const cartClickHandler = function () {
         console.log("Entered click handler");
-        if (amountOfItems !== 0) {
+        if (amountOfItems() !== 0) {
             setOrderState(true);
         }
     }

@@ -37,7 +37,7 @@ function App() {
     <ItemsAdded.Provider value={mealsList}>
       <Header></Header>
       <Content></Content>
-      <Meals mealsList = {mealsList} dispatcherToCall={dispatcherToCall}></Meals>
+      <Meals mealsList={mealsList} dispatcherToCall={dispatcherToCall}></Meals>
     </ItemsAdded.Provider>
   );
 }
