@@ -1,3 +1,4 @@
+import React from 'react';
 import img from './meals.jpg';
 import sty from './Content.module.css';
 
@@ -15,4 +16,4 @@ function Content() {
         </div>
     )
 }
-export default Content;
+export default React.memo(Content);

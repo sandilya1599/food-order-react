@@ -32,7 +32,7 @@ function FinishOrder(props) {
                                     return <React.Fragment key={meal.key}>
                                         <b>{meal.name}</b>
                                         <br/>
-                                        <b>${meal.amount*parseFloat(meal.price.substring(1))}</b>
+                                        <b>${meal.amount*parseFloat(meal.price.substring(1)).toFixed(2)}</b>
                                         <hr/>
                                     </React.Fragment>
                                 } else{

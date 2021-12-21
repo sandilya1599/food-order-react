@@ -1,11 +1,12 @@
+import React from 'react';
 import styles from './Meal.module.css';
 import {useEffect, useState} from 'react';
 import { Button } from 'react-bootstrap';
-function Meals(props) {
+function Meal(props) {
 
     const [amount, setAmount] = useState(0);
 
-    var updateAmountAdd = event => {
+    var updateAmountAdd = () => {
         setAmount(prevAmount => {
             return prevAmount + 1;
         });
@@ -22,7 +23,7 @@ function Meals(props) {
 
     useEffect(() => {
         props.dispatchFunc(props.index, amount);
-    },[props.index, amount]);
+    },[props,amount]);
 
     return (
         <>
@@ -43,4 +44,4 @@ function Meals(props) {
     );
 }
 
-export default Meals;
+export default React.memo(Meal, (oldProps, newProps) => oldProps.amount === newProps.amount);
