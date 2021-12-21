@@ -22,5 +22,12 @@
     background-color: brown;
     border-radius: 15px;
     width: 75px;
-    color: white;
+}
+
+.meal-amount button:hover {
+    background-color: brown;
+}
+
+.meal-amount button:active {
+    background-color: brown;
 }

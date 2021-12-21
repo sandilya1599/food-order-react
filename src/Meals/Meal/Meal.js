@@ -1,5 +1,6 @@
 import styles from './Meal.module.css';
 import {useEffect, useState} from 'react';
+import { Button } from 'react-bootstrap';
 function Meals(props) {
 
     const [amount, setAmount] = useState(0);
@@ -34,7 +35,7 @@ function Meals(props) {
                 <div className={styles["meal-amount"]}>
                     <label><b>Amount</b></label>&nbsp;
                     <input type="text" value={amount} onChange={updateAmount} min={0}/> <br />
-                    <button onClick={updateAmountAdd}>Add</button>
+                    <Button onClick={updateAmountAdd} size='sm' className='mt-1 pt-1'>Add</Button>
                 </div>
             </div>
             <hr />

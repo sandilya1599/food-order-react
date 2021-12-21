@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import classes from './Header.module.css';
+import { Button } from 'react-bootstrap';
 
 function FinishOrder(props) {
     const order = () => {
@@ -13,7 +14,7 @@ function FinishOrder(props) {
 
     const getTotal = function() {
         var totalAmount = 0;
-        props.displayItems.map(meal => {
+        props.displayItems.forEach(meal => {
             totalAmount += meal.amount*parseFloat(meal.price.substring(1));
         });
         return totalAmount;
@@ -34,14 +35,17 @@ function FinishOrder(props) {
                                         <b>${meal.amount*parseFloat(meal.price.substring(1))}</b>
                                         <hr/>
                                     </React.Fragment>
+                                } else{
+                                    return <React.Fragment key={meal.key}></React.Fragment>;
                                 }
                             }
                         )
                     }
-                    <b> Total: {getTotal()}</b>
+                    <b> Total: &nbsp; ${getTotal()}</b>
                     <br/>
-                    <button onClick={props.closeHandler}>Close</button>
-                    <button onClick={order}>Order</button>
+                    <Button onClick={order} className='ml-1 mt-1' variant='success'>Order</Button>
+                    &nbsp;
+                    <Button onClick={props.closeHandler} className='mr-1 mt-1' variant='danger'>Close</Button>
                 </div>
             </div>
         );
