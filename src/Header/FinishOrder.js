@@ -17,7 +17,7 @@ function FinishOrder(props) {
         props.displayItems.forEach(meal => {
             totalAmount += meal.amount*parseFloat(meal.price.substring(1));
         });
-        return totalAmount;
+        return totalAmount.toFixed(2);
     }
 
     const PopUpDiv = function () {
